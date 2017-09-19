@@ -8,8 +8,7 @@
     "test": "mocha --colors --watch  test/setup.test.js */*.test.js",
     "cover": "nodemon --exec nyc --reporter=lcov --reporter=text-summary mocha test/setup.test.js */*.test.js",
     "heroku": "node index.js",
-    "travis": "nyc mocha test/setup.test.js */*.test.js",
-    "posttravis": "nyc report --reporter=text-lcov | coveralls"
+    "travis": "mocha test/setup.test.js */*.test.js"
   },
   "author": "Joe Turner <jturner@thinkful.com>",
   "license": "MIT",
@@ -22,7 +21,6 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
-    "coveralls": "^2.13.1",
     "mocha": "^3.5.3",
     "nodemon": "^1.12.1",
     "nyc": "^11.2.1"
