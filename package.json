@@ -15,8 +15,10 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.15.4",
+    "knex": "^0.13.0",
     "mongoose": "^4.11.12",
-    "morgan": "^1.8.2"
+    "morgan": "^1.8.2",
+    "pg": "^7.3.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",

@@ -14,7 +14,12 @@ function dbDisconnect() {
     return mongoose.disconnect();
 }
 
+function dbGet() {
+    return mongoose;
+}
+
 module.exports = {
     dbConnect,
-    dbDisconnect
+    dbDisconnect,
+    dbGet
 };

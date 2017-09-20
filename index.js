@@ -3,8 +3,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 const {PORT, CLIENT_ORIGIN} = require('./config');
-// Uncomment for MongoDB/Mongoose
 const {dbConnect} = require('./db-mongoose');
+// const {dbConnect} = require('./db-knex');
 
 const app = express();
 
@@ -32,7 +32,6 @@ function runServer(port = PORT) {
 }
 
 if (require.main === module) {
-    // Uncomment for database
     dbConnect();
     runServer();
 }
