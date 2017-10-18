@@ -4,10 +4,10 @@ const {DATABASE_URL} = require('./config');
 
 let knex = null;
 
-function dbConnect() {
+function dbConnect(url = DATABASE_URL) {
     knex = createKnex({
         client: 'pg',
-        connection: DATABASE_URL
+        connection: url
     });
 }
 
